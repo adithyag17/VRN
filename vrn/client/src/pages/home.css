@@ -1,0 +1,101 @@
+.container {
+  text-align: center;
+}
+
+h1.heading {
+  font-size: 100px; /* Adjust the font size as needed */
+  color: #000; /* Black color */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; /* Use a professional font style like Arial */
+  font-weight: bold; /* Optional: Make the text bold */
+  /* Additional properties for spacing and alignment */
+  margin: 0; /* Reset any default margin */
+  padding: 10px 0; /* Optional: Add padding for spacing */
+  text-align: center; /* Optional: Center the text horizontally */
+  position: absolute;
+  right: 480px;
+}
+h1.heading2 {
+  font-size: 100px; /* Adjust the font size as needed */
+  color: #000; /* Black color */
+  font-family: "Montserrat"; /* Use a professional font style like Arial */
+  font-weight: bold; /* Optional: Make the text bold */
+  /* Additional properties for spacing and alignment */
+  margin: 0; /* Reset any default margin */
+  padding: 10px 0; /* Optional: Add padding for spacing */
+  text-align: center; /* Optional: Center the text horizontally */
+  position: absolute;
+  padding-top: 120px;
+  right: 240px;
+}
+/*Montserrat*/
+@keyframes slideInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.container {
+  display: flex;
+
+  justify-content: center;
+  height: 100vh;
+}
+
+.center {
+  text-align: center;
+}
+
+.heading {
+  font-size: 48px;
+  color: #000;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.slide-in {
+  animation: slideInAnimation 1.7s ease-in-out;
+}
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  height: 60px;
+  width: 100%;
+  padding-top: 0px;
+  margin: 0%;
+}
+
+.dashboard button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  width: fit-content;
+  padding-left: 0px;
+  font-size: 25px;
+  font-family: "Montserrat";
+  height: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dashboard button:hover {
+  background-color: #fff;
+  color: #000;
+}
+div.center {
+  align-items: center;
+  position: relative;
+  top: 50px;
+  right: 200px;
+  padding-top: 200px;
+  padding-left: 0px;
+}
