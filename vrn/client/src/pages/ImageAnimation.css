@@ -1,0 +1,37 @@
+.image-container {
+  display: flex;
+  flex-direction: column; /* Arrange images vertically */
+  justify-content: center;
+  align-items: center;
+  height: fit-content; /* Reduce the height to half the screen */
+  background-color: #e5e0ea; /* Set the background color here */
+  padding-top: 200px;
+  bottom: 300px;
+}
+
+.image {
+  opacity: 0;
+  margin: 0%;
+  padding-bottom: 240px;
+  transition: opacity 0.5s;
+  width: 50%; /* Reduce the width to half the container size */
+  /* Reduce the height to half the container size */
+  object-fit: cover;
+}
+
+.visible {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.image.visible {
+  animation: slideIn 1.5s forwards; /* Apply slide-in animation only when visible */
+}
