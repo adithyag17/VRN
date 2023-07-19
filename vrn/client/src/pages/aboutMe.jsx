@@ -5,7 +5,7 @@ import imgtwo from "./tree.jpg";
 
 function AboutMe() {
   return (
-    <div className="container">
+    <div className="container" id="aboutus">
       <div className="card-container">
         <div className="image-container">
           <img src={img} alt="" class="card-img" />
