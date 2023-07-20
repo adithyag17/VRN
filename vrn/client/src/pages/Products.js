@@ -30,6 +30,12 @@ const Products = () => {
       cost: 39.99,
       wattage: 30,
     },
+    {
+      product_name: "Ceiling LED Panel",
+      cost: 39.99,
+      wattage: 30,
+    },
+    
   ];
 
   const addToCart = (product) => {
@@ -40,12 +46,17 @@ const Products = () => {
     <div>
       <h1>Products</h1>
       <div className="product-container">
+        
         {productsData.map((product, index) => (
+
           <div className="product-card" key={index}>
-            <h2>{product.product_name}</h2>
-            <p>Cost: ${product.cost}</p>
-            <p>Wattage: {product.wattage}W</p>
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
+            <div className="product-image"></div>
+            <h2 className="product-title">{product.product_name} &nbsp; <p className="product-cost">${product.cost}</p></h2>
+            
+            <p className="product-wattage">Wattage: {product.wattage}W</p>
+            <button className="product-add-btn" onClick={() => addToCart(product)}>Add to Cart</button>
+            
+            
           </div>
         ))}
       </div>
