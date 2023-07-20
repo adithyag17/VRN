@@ -1,5 +1,3 @@
-// Product.js
-
 import React, { useState } from "react";
 import "./Products.css"; // Import the CSS file
 
