@@ -43,7 +43,10 @@ const Products = () => {
   };
 
   return (
-    <div>
+    <div className="wrapper-parent">
+      <div className="wrapper-child">
+
+      
       <h1>Products</h1>
       <div className="product-container">
         
@@ -70,6 +73,7 @@ const Products = () => {
             <hr />
           </div>
         ))}
+        </div>
       </div>
     </div>
   );
