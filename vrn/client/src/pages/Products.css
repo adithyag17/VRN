@@ -1,22 +1,108 @@
-/* product.css */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h2{
+  display: flex;
+}
+
+.wrapper-child{
+  display: flex;
+  flex-direction: row;
+}
 
 .product-container {
   display: flex;
-  flex-wrap: wrap;
+  width: 75%;
   gap: 20px;
+  
+  padding-left: 1em;
+  padding-right: 1em;
+  flex-wrap: wrap;
+  padding: 2.5em;
+ 
+  justify-content: left;
+}
+
+.product-image{
+  background-color: white;
+  min-height: 20em;
+  min-width:100%;
+  border-radius: 15px;
+  
 }
 
 .product-card {
-  width: calc(
-    50% - 10px
-  ); /* To ensure two products come on each row with some gap */
-  border: 1px solid #ccc;
+ 
+  flex-basis: 33%;
+  border: 1px solid grey;
+  width: 20%;
   padding: 10px;
+  border-radius: 15px;
   margin-bottom: 20px;
 }
 
 .cart-container {
+  
   margin-top: 30px;
   border-top: 1px solid #ccc;
   padding-top: 20px;
+}
+
+/* From uiverse.io by @Ali-Tahmazi99 */
+.product-add-btn {
+  margin-top: 5px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+ }
+ 
+ .product-add-btn::before,
+ .product-add-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+ }
+ 
+ .product-add-btn::before {
+  left: -10px;
+  background: #240046;
+ }
+ 
+ .product-add-btn::after {
+  right: -10px;
+  background: #5a189a;
+ }
+ 
+ .product-add-btn:hover::before,
+ .product-add-btn:hover::after {
+  width: 58%;
+ }
+ 
+ .product-add-btn:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+ }
+ 
+ .product-add-btn span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+ }
+.product-wattage{
+  font-weight: 700;
 }
