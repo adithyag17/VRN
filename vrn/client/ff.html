@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GST INVOICE</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .company-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .company-details div {
+        flex: 1;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 8px;
+      }
+      th {
+        text-align: left;
+      }
+      .total-amount {
+        margin-bottom: 20px;
+      }
+      .amount-in-words {
+        border-top: 1px solid #000;
+        padding-top: 10px;
+      }
+      .bank-details {
+        margin-bottom: 20px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .signature {
+        text-align: right;
+        margin-top: 20px;
+      }
+      .declaration {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GST INVOICE</h1>
+
+    <div class="company-details">
+      <!-- OUR COMPANY DETAILS (TOP LEFT) -->
+      <div>
+        <!-- Add your company details here -->
+        <!-- For example: -->
+        <p>VRN Innovators</p>
+        <p>Address Line 1</p>
+        <p>Address Line 2</p>
+        <!-- Add more details if necessary -->
+      </div>
+
+      <!-- CUSTOMER COMPANY DETAILS (TOP RIGHT) -->
+      <div>
+        <!-- Add customer company details here -->
+        <!-- For example: -->
+        <p>Customer Company Name</p>
+        <p>Customer Address Line 1</p>
+        <p>Customer Address Line 2</p>
+        <!-- Add more details if necessary -->
+      </div>
+    </div>
+
+    <!-- DETAILS SUCH AS Serial No of Invoice, Date/Time of Preparation, Product no -->
+    <div>
+      <!-- Add details here -->
+      <!-- For example: -->
+      <p>Serial No of Invoice: ${invoiceno}</p>
+      <p>Date / Time of Preparation: August 2, 2023 10:00 AM</p>
+      <p>Product No: ${productno}</p>
+      <!-- Add more details if necessary -->
+    </div>
+
+    <!-- TABLE CONTAINING PRODUCTS -->
+    <table>
+      <thead>
+        <tr>
+          <th>Sl. No</th>
+          <th>Description</th>
+          <th>HSN Code</th>
+          <th>Wattage</th>
+          <th>Rate per Unit</th>
+          <th>Total Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Add products dynamically using your programming language or framework -->
+        <!-- For example, if you're using JavaScript, you can generate rows using a loop -->
+        <tr>
+          <td>1</td>
+          <td>${products[0].product_name}</td>
+          <td>cart[0].HSN</td>
+          <td>cart[0].wattage</td>
+          <td>{cart[0].quantity}</td>
+          <td>{cart[0].rate}</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>${cart[1].product_name}</td>
+          <td>cart[1].HSN</td>
+          <td>cart[0].wattage</td>
+          <td>{cart[1].quantity}</td>
+          <td>{cart[1].rate}</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>${cart[2].product_name}</td>
+          <td>cart[2].HSN</td>
+          <td>cart[0].wattage</td>
+          <td>{cart[2].quantity}</td>
+          <td>{cart[2].rate}</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>${cart[3].product_name}</td>
+          <td>cart[3].HSN</td>
+          <td>cart[0].wattage</td>
+          <td>{cart[3].quantity}</td>
+          <td>{cart[3].rate}</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>${cart[4].product_name}</td>
+          <td>cart[4].HSN</td>
+          <td>cart[0].wattage</td>
+          <td>{cart[4].quantity}</td>
+          <td>{cart[4].rate}</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>${cart[5].product_name}</td>
+          <td>cart[5].HSN</td>
+          <td>cart[0].wattage</td>
+          <td>{cart[5].quantity}</td>
+          <td>{cart[5].rate}</td>
+        </tr>
+        <!-- Add more rows for other cart if necessary -->
+      </tbody>
+    </table>
+
+    <!-- TOTAL AMOUNT OF ALL PRODUCTS AND GST PERCENTAGE -->
+    <div class="total-amount">
+      <!-- Add total amount and GST percentage here -->
+      <!-- For example: -->
+      <p>Amount without tax: totalAmount</p>
+      <p>GST Percentage(18%): gstamount</p>
+      <p>Total Amount: grandtotalAmount</p>
+    </div>
+
+    <!-- PRINT VALUE OF MONEY IN WORDS -->
+    <div class="amount-in-words">
+      <!-- Add value of money in words here -->
+      <!-- For example: -->
+      <p>Amount in Words: Two Hundred and 00/100</p>
+    </div>
+
+    <!-- BANK DETAILS -->
+    <div class="bank-details">
+      <!-- Add bank details here -->
+      <!-- For example: -->
+      <p>Bank Name: Your Bank Name</p>
+      <p>Account Number: 1234567890</p>
+      <p>IFSC Code: ABCD1234567</p>
+      <!-- Add more bank details if necessary -->
+    </div>
+
+    <!-- DECLARATION IN THE BOTTOM LEFT -->
+    <div class="declaration">
+      <!-- Add declaration text here -->
+      <!-- For example: -->
+      <p>
+        <strong>Declaration:</strong> We declare that this invoice shows the
+        actual price of the goods described and that all particulars are true
+        and correct.
+      </p>
+    </div>
+
+    <!-- SIGNATURE FOR VRN INNOVATORS -->
+    <div class="signature">
+      <!-- For example: -->
+      <p>For VRN Innovators</p>
+      <!-- Add space for the actual signature if needed -->
+    </div>
+  </body>
+</html>
